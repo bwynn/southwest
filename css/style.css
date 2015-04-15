@@ -1,0 +1,29 @@
+html,
+body {
+  width: 100%;
+}
+
+body,
+figure {
+  margin: 0;
+}
+
+figure {
+  display: block;
+}
+
+.img {
+  width: 100%;
+  background-image: url("../img/grandcanyon_lg_2x.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+figure.img {
+  height: 600px;
+}
+
+.divider {
+  height: 500px;
+}
