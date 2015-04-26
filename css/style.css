@@ -83,18 +83,6 @@ a {
   float: left;
 }
 
-#galleryWrap > figure#one {
-  background-image: url('../img/gallery1.jpg');
-}
-
-#galleryWrap > figure#two {
-  background-image: url('../img/gallery2.jpg');
-}
-
-#galleryWrap > figure#three {
-  background-image: url('../img/gallery3.jpg');
-}
-
 #galleryOuter > nav {
   position: absolute;
   top: 10%;
@@ -170,6 +158,101 @@ a {
   transform: rotate(45deg);
   left: 8px;
 }
+
+/* ================= Backgrounds =================== */
+
+@media only screen and (min-width: 1025px) and (-webkit-min-device-pixel-ratio: 2) {
+  #galleryWrap > figure#one {
+    background-image: url('../img/gallery1_lg_2x.jpg');
+  }
+
+  #galleryWrap > figure#two {
+    background-image: url('../img/gallery2_lg_2x.jpg');
+  }
+
+  #galleryWrap > figure#three {
+    background-image: url('../img/gallery3_lg_2x.jpg');
+  }
+}
+
+@media only screen and (min-width: 1025px) and (-webkit-min-device-pixel-ratio: 1) {
+  #galleryWrap > figure#one {
+    background-image: url('../img/gallery1_lg.jpg');
+  }
+
+  #galleryWrap > figure#two {
+    background-image: url('../img/gallery2_lg.jpg');
+  }
+
+  #galleryWrap > figure#three {
+    background-image: url('../img/gallery3_lg.jpg');
+  }
+}
+
+@media only screen and (min-width: 769px) and (-webkit-min-device-pixel-ratio: 2) {
+  #galleryWrap > figure#one {
+    background-image: url('../img/gallery1_md_2x.jpg');
+  }
+
+  #galleryWrap > figure#two {
+    background-image: url('../img/gallery2_md_2x.jpg');
+  }
+
+  #galleryWrap > figure#three {
+    background-image: url('../img/gallery3_md_2x.jpg');
+  }
+}
+
+@media only screen and (min-width: 769px) and (-webkit-min-device-pixel-ratio: 1) {
+  #galleryWrap > figure#one {
+    background-image: url('../img/gallery1_md.jpg');
+  }
+
+  #galleryWrap > figure#two {
+    background-image: url('../img/gallery2_md.jpg');
+  }
+
+  #galleryWrap > figure#three {
+    background-image: url('../img/gallery3_md.jpg');
+  }
+}
+
+@media only screen and (max-width: 768px) and (-webkit-min-device-pixel-ratio: 1) {
+  #galleryWrap > figure#one {
+    background-image: url('../img/gallery1_sm.jpg');
+    background-position: center bottom;
+  }
+
+  #galleryWrap > figure#two {
+    background-image: url('../img/gallery2_sm.jpg');
+    background-position: center bottom;
+  }
+
+  #galleryWrap > figure#three {
+    background-image: url('../img/gallery3_sm.jpg');
+    background-position: right;
+  }
+}
+
+@media only screen and (max-width: 768px) and (-webkit-min-device-pixel-ratio: 2) {
+  #galleryWrap > figure#one {
+    background-image: url('../img/gallery1_sm_2x.jpg');
+    background-position: center bottom;
+  }
+
+  #galleryWrap > figure#two {
+    background-image: url('../img/gallery2_sm_2x.jpg');
+    background-position: center bottom;
+  }
+
+  #galleryWrap > figure#three {
+    background-image: url('../img/gallery3_sm_2x.jpg');
+    background-position: right bottom;
+  }
+}
+
+
+
 
 /* ---------- Section dividers -----------*/
 .jtree {

@@ -66,3 +66,5 @@ var triggers = function() {
     gallery.next();
   },false);
 }();
+
+gallery.setWidth();
