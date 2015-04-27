@@ -160,14 +160,32 @@ a {
 }
 
 /* ------- Dotnav ------ */
-#dotnav > ul > li:before {
-  display: block;
-  height: 8px;
-  width: 8px;
-  border-radius: 50%;
-  background-color: #000;
-  float: left;
-  margin-left: 10px;
+#dotnav li a {
+	overflow: hidden;
+	background-color: rgba(0,0,0,0);
+	box-shadow: inset 0 0 0 2px rgba(255,255,255,1);
+	transition: background 0.3s;
+}
+
+#dotnav li a::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	height: 0;
+	left: 0;
+	width: 100%;
+	background-color: #fff;
+	box-shadow: 0 0 1px #fff;
+	transition: height 0.3s;
+}
+
+#dotnav li a:hover,
+#dotnav li a:focus {
+	background-color: rgba(0,0,0,0.2);
+}
+
+#dotnav li.current a::after {
+	height: 100%;
 }
 
 /* ================= Backgrounds =================== */

@@ -15,6 +15,9 @@ var gallery = {
     var size = document.getElementById('galleryOuter').offsetWidth;
     var slide = document.getElementById('galleryWrap');
 
+      // if the slide doesn't have an inline style attribute assigned to it or if the
+      // slide has a particular value, then add translate style at value determine by
+      // window width variable
       if (!slide.hasAttribute('style') ||
            slide.style.transform == 'translateX(0px)') {
         slide.style.webkitTransition = '.5s ease-in-out';
@@ -22,7 +25,7 @@ var gallery = {
         slide.style.webkitTransform = 'translate(-' + size + 'px,0px)';
         slide.style.MozTransform = 'translateX(-' + size +'px)';
         slide.style.transform = 'translateX(-' + size +'px)';
-      } else {
+      } else { // or else add 2x value of size
         slide.style.webkitTransition = '.5s ease-in-out';
         slide.style.transition = '.5s ease-in-out';
         slide.style.webkitTransform = 'translate(-' + size*2 + 'px,0px)';
@@ -48,6 +51,12 @@ var gallery = {
         slide.style.MozTransform = 'translateX(0px)';
         slide.style.transform = 'translateX(0px)';
       }
+    },
+    // loop through dotnav anchor elements, remove active class from all elements and
+    // then set index to the next
+    dotnav: function() {
+      var navbtn = document.querySelectorAll('#dotnav ul li a');
+      
     }
 };
 
@@ -59,11 +68,13 @@ var triggers = function() {
   leftPaddle.addEventListener('click', function(e) {
     gallery.setWidth();
     gallery.previous();
+    gallery.dotnav()
   },false);
 
   rightPaddle.addEventListener('click', function(e) {
     gallery.setWidth();
     gallery.next();
+    gallery.dotnav();
   },false);
 }();
 
