@@ -56,7 +56,9 @@ var gallery = {
     // then set index to the next
     dotnav: function() {
       var navbtn = document.querySelectorAll('#dotnav ul li a');
-      
+      // remove all classes of style
+      // add active class to the next or
+      // previous navigation button
     }
 };
 
