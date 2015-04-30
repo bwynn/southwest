@@ -290,12 +290,22 @@ a {
   }
 }
 
-
-
-
 /* ---------- Section dividers -----------*/
 .jtree {
   background: url('../img/joshuatree.svg');
   background-size: cover;
   background-position: center;
+}
+
+#jtree .img {
+  background-image: url("../img/jtree.jpg");
+}
+
+.sedona {
+  background-image: url("../img/sedonadiv.jpg");
+  background-position: bottom;
+}
+
+#sedona .img {
+  background-image: url("../img/hotwalk.jpg");
 }

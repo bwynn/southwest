@@ -4,11 +4,11 @@ var gallery = {
   setWidth: function() {
     // This iterates through the figure tags and changes the width property
     // of the images when invoked, which happens to be upon user trigger.
-    var imgSize = document.querySelectorAll('#galleryOuter > #galleryWrap > figure.backgd');
-    var size = document.getElementById('galleryOuter').offsetWidth;
+    var imgSize = $("#galleryOuter > #galleryWrap > figure.backgd");  //document.querySelectorAll('#galleryOuter > #galleryWrap > figure.backgd');
+    var size = $("#galleryOuter").width();  //document.getElementById('galleryOuter').offsetWidth;
 
     for (var i = 0; i < imgSize.length; i++) {
-      imgSize[i].style.width = '' + size + 'px';
+      $(imgSize[i]).css("width", size + "px");  // vanilla js //imgSize[i].style.width = '' + size + 'px';
     }
   },
   next: function(){
@@ -55,9 +55,8 @@ var gallery = {
     // loop through dotnav anchor elements, remove active class from all elements and
     // then set index to the next
     dotnav: function() {
-      var navbtn = document.querySelectorAll('#dotnav ul li a');
-      // remove all classes of style
-      // add active class to the next or
+      var navbtn = $("#dotnav ul li a");//document.querySelectorAll('#dotnav ul li a');
+      
       // previous navigation button
     }
 };
