@@ -206,7 +206,12 @@ a {
 
 /* ================= Backgrounds =================== */
 
-@media only screen and (min-width: 1025px) and (-webkit-min-device-pixel-ratio: 2) {
+@media
+only screen and (min-width: 1025px) and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min-width: 1025px) and (min--moz-device-pixel-ratio: 2),
+only screen and (min-width: 1025px) and (min-device-pixel-ratio: 2)
+only screen and (min-width: 1025px) and (min-resolution: 192dpi),
+only screen and (min-width: 1025px) and (min-resolution: 2dppx) {
   #galleryWrap > figure#one {
     background-image: url('../img/gallery1_lg_2x.jpg');
   }
@@ -220,7 +225,10 @@ a {
   }
 }
 
-@media only screen and (min-width: 1025px) and (-webkit-min-device-pixel-ratio: 1) {
+@media
+only screen and (min-width: 1025px) and (-webkit-min-device-pixel-ratio: 1),
+only screen and (min-width: 1025px) and (min--moz-device-pixel-ratio: 1),
+only screen and (min-width: 1025px) and (min-device-pixel-ratio: 1) {
   #galleryWrap > figure#one {
     background-image: url('../img/gallery1_lg.jpg');
   }
@@ -234,7 +242,12 @@ a {
   }
 }
 
-@media only screen and (min-width: 769px) and (-webkit-min-device-pixel-ratio: 2) {
+@media
+only screen and (min-width: 769px) and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min-width: 769px) and (min--moz-device-pixel-ratio: 2),
+only screen and (min-width: 769px) and (min-device-pixel-ratio: 2)
+only screen and (min-width: 769px) and (min-resolution: 192dpi),
+only screen and (min-width: 769px) and (min-resolution: 2dppx) {
   #galleryWrap > figure#one {
     background-image: url('../img/gallery1_md_2x.jpg');
   }
@@ -248,7 +261,10 @@ a {
   }
 }
 
-@media only screen and (min-width: 769px) and (-webkit-min-device-pixel-ratio: 1) {
+@media
+only screen and (min-width: 769px) and (-webkit-min-device-pixel-ratio: 1),
+only screen and (min-width: 769px) and (min--moz-device-pixel-ratio: 1),
+only screen and (min-width: 769px) and (min-device-pixel-ratio: 1) {
   #galleryWrap > figure#one {
     background-image: url('../img/gallery1_md.jpg');
   }
@@ -262,7 +278,10 @@ a {
   }
 }
 
-@media only screen and (max-width: 768px) and (-webkit-min-device-pixel-ratio: 1) {
+@media
+only screen and (max-width: 768px) and (-webkit-min-device-pixel-ratio: 1),
+only screen and (max-width: 768px) and (min--moz-device-pixel-ratio: 1),
+only screen and (max-width: 768px) and (min-device-pixel-ratio: 1) {
   #galleryWrap > figure#one {
     background-image: url('../img/gallery1_sm.jpg');
     background-position: center bottom;
@@ -279,7 +298,12 @@ a {
   }
 }
 
-@media only screen and (max-width: 768px) and (-webkit-min-device-pixel-ratio: 2) {
+@media
+only screen and (max-width: 768px) and (-webkit-min-device-pixel-ratio: 2),
+only screen and (max-width: 768px) and (min--moz-device-pixel-ratio: 2),
+only screen and (max-width: 768px) and (min-device-pixel-ratio: 2)
+only screen and (max-width: 768px) and (min-resolution: 192dpi),
+only screen and (max-width: 768px) and (min-resolution: 2dppx) {
   #galleryWrap > figure#one {
     background-image: url('../img/gallery1_sm_2x.jpg');
     background-position: center bottom;
