@@ -51,32 +51,40 @@ var gallery = {
         slide.style.MozTransform = 'translateX(0px)';
         slide.style.transform = 'translateX(0px)';
       }
-    },
+    }
     // loop through dotnav anchor elements, remove active class from all elements and
     // then set index to the next
-    dotnav: function() {
-      var navbtn = $("#dotnav ul li a");//document.querySelectorAll('#dotnav ul li a');
-      
-      // previous navigation button
-    }
 };
 
 // self-invoked function returns access to the event handlers when the page loads
 var triggers = function() {
   var leftPaddle = document.querySelector('#left a');
   var rightPaddle = document.querySelector('#right a');
+  var backgd = $("figure.backgd");
 
   leftPaddle.addEventListener('click', function(e) {
+    backgd.removeClass("active");
+    backgd.prev().addClass("active");
     gallery.setWidth();
     gallery.previous();
-    gallery.dotnav()
   },false);
 
   rightPaddle.addEventListener('click', function(e) {
     gallery.setWidth();
     gallery.next();
-    gallery.dotnav();
   },false);
+}();
+
+var dotNavigation = function() {
+  var dotnav = $(".dotnavwrap a");
+
+  // changes classes when user interacts with the dotnav anchor tag
+  dotnav.on("click", function(e) {
+    dotnav.removeClass("active");
+    $(this).addClass("active");
+    // jump to slide
+  });
+
 }();
 
 gallery.setWidth();
