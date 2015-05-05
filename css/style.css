@@ -27,6 +27,7 @@ figure.img {
 
 .divider {
   height: 500px;
+  overflow: hidden;
 }
 
 ul {
@@ -338,4 +339,13 @@ only screen and (max-width: 768px) and (min-resolution: 2dppx) {
 
 #sedona .img {
   background-image: url("../img/hotwalk.jpg");
+}
+
+#sedona article {
+  padding: 2em;
+  min-height: 500px;
+}
+
+.gc {
+  background-color: black;
 }
