@@ -15,8 +15,8 @@ var gallery = {
     var size = $('#galleryOuter').width();
     var slides = $('.backgd');
 
-    for (var i = 0; i < slides.length; i+=1) {
-      console.log(i);
+    for (var i = 0; i < slides.length; i++) {
+      console.log(slides[i]);
       slides.css("transform", "translateX(-" + size*i + "px)");
       }
     },
@@ -25,42 +25,32 @@ var gallery = {
     // property of the translate style on the gallery figure elements
     var size = $('#galleryOuter').width();
     var slides = $('.backgd');
-      if (slide.style.transform == 'translateX(-' + size*2 + 'px)') {
-        slide.style.webkitTransition = '.5s ease-in-out';
-        slide.style.transition = '.5s ease-in-out';
-        slide.style.webkitTransform = 'translate(-' + size + 'px,0px)';
-        slide.style.MozTransform = 'translateX(-' + size + 'px)';
-        slide.style.transform = 'translateX(-' + size + 'px)';
-      } else {
-        slide.style.webkitTransition = '.5s ease-in-out';
-        slide.style.transition = '.5s ease-in-out';
-        slide.style.webkitTransform = 'translate(0px,0px)';
-        slide.style.MozTransform = 'translateX(0px)';
-        slide.style.transform = 'translateX(0px)';
-      }
+
+    for (var i = 0; i < slides.length; i++) {
+      slides.css("transform", "translateX(0px)");
     }
     // loop through dotnav anchor elements, remove active class from all elements and
     // then set index to the next
+  }
 };
 
 // self-invoked function returns access to the event handlers when the page loads
 var triggers = function() {
-  var leftPaddle = document.querySelector('#left a');
-  var rightPaddle = document.querySelector('#right a');
-  var backgd = $("figure.backgd");
+  var leftPaddle = $('#left a');
+  var rightPaddle = $('#right a');
 
-  leftPaddle.addEventListener('click', function(e) {
+  leftPaddle.on('click', function(e) {
     gallery.setWidth();
     gallery.previous();
-  },false);
+  });
 
-  rightPaddle.addEventListener('click', function(e) {
+  rightPaddle.on('click', function(e) {
     gallery.setWidth();
     gallery.next();
-  },false);
+  });
 }();
 
-var dotNavigation = function() {
+$(function(){
   var dotnav = $(".dotnavwrap a");
 
   // changes classes when user interacts with the dotnav anchor tag
@@ -69,7 +59,7 @@ var dotNavigation = function() {
     $(this).addClass("active");
     // jump to slide
   });
+}());
 
-}();
 
 gallery.setWidth();
