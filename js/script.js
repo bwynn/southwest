@@ -12,32 +12,19 @@ var gallery = {
     }
   },
   next: function(){
-    var size = document.getElementById('galleryOuter').offsetWidth;
-    var slide = document.getElementById('galleryWrap');
+    var size = $('#galleryOuter').width();
+    var slides = $('.backgd');
 
-      // if the slide doesn't have an inline style attribute assigned to it or if the
-      // slide has a particular value, then add translate style at value determine by
-      // window width variable
-      if (!slide.hasAttribute('style') ||
-           slide.style.transform == 'translateX(0px)') {
-        slide.style.webkitTransition = '.5s ease-in-out';
-        slide.style.transition = '.5s ease-in-out';
-        slide.style.webkitTransform = 'translate(-' + size + 'px,0px)';
-        slide.style.MozTransform = 'translateX(-' + size +'px)';
-        slide.style.transform = 'translateX(-' + size +'px)';
-      } else { // or else add 2x value of size
-        slide.style.webkitTransition = '.5s ease-in-out';
-        slide.style.transition = '.5s ease-in-out';
-        slide.style.webkitTransform = 'translate(-' + size*2 + 'px,0px)';
-        slide.style.MozTransform = 'translateX(-' + size*2 +'px)';
-        slide.style.transform = 'translateX(-' + size*2 +'px)';
+    for (var i = 0; i < slides.length; i+=1) {
+      console.log(i);
+      slides.css("transform", "translateX(-" + size*i + "px)");
       }
     },
   previous: function(){
     // this will take the window width and use that number to decrement the
     // property of the translate style on the gallery figure elements
-    var size = document.getElementById('galleryOuter').offsetWidth;
-    var slide = document.getElementById('galleryWrap');
+    var size = $('#galleryOuter').width();
+    var slides = $('.backgd');
       if (slide.style.transform == 'translateX(-' + size*2 + 'px)') {
         slide.style.webkitTransition = '.5s ease-in-out';
         slide.style.transition = '.5s ease-in-out';
@@ -63,8 +50,6 @@ var triggers = function() {
   var backgd = $("figure.backgd");
 
   leftPaddle.addEventListener('click', function(e) {
-    backgd.removeClass("active");
-    backgd.prev().addClass("active");
     gallery.setWidth();
     gallery.previous();
   },false);
