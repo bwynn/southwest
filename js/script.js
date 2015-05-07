@@ -15,9 +15,16 @@ var gallery = {
     var size = $('#galleryOuter').width();
     var slides = $('.backgd');
 
-    for (var i = 0; i < slides.length; i++) {
-      console.log(slides[i]);
-      slides.css("transform", "translateX(-" + size*i + "px)");
+      // 3 slide gallery, basic logic determines slide positions
+      // conditional statement determines current transform values applied to the
+      // .backgd elements. Logical or condition determines between no style
+      // value applied and style applied for boolean determinations
+      if (slides.css("transform") == "none" ||
+          slides.css("transform") == "matrix(1, 0, 0, 1, 0, 0)") {
+        slides.css("transform", "translateX(-" + size + "px)");
+      } else {
+        // translate to farthest slide
+        slides.css("transform", "translateX(-" + size*2 + "px)");
       }
     },
   previous: function(){
@@ -26,11 +33,33 @@ var gallery = {
     var size = $('#galleryOuter').width();
     var slides = $('.backgd');
 
-    for (var i = 0; i < slides.length; i++) {
+    // a reverse of the 3 slide gallery conditional from above, except
+    // no 'or' statement required, as style has already been applied
+    // by the time a user arrives at the far slide
+    if (slides.css("transform") == "matrix(1, 0, 0, 1, -" + size*2 + ", 0)") {
+      slides.css("transform", "translateX(-" + size + "px)");
+    } else {
       slides.css("transform", "translateX(0px)");
     }
     // loop through dotnav anchor elements, remove active class from all elements and
     // then set index to the next
+  },
+  dotnav: function() {
+    var dotnav = $(".dotnavwrap a");
+    var size = $('#galleryOuter').width();
+    var slides = $('.backgd');
+    // switcher between the three dotnavs
+    switch (dotnav) {
+      case 0:
+      slides.css("transform", "translateX(0px)");
+      break;
+      case 1:
+      slides.css("transform", "translateX(-" + size + "px)");
+      break;
+      case 2:
+      slides.css("transform", "translateX(-" + size*2 + "px)");
+      break;
+    }
   }
 };
 
@@ -54,10 +83,21 @@ $(function(){
   var dotnav = $(".dotnavwrap a");
 
   // changes classes when user interacts with the dotnav anchor tag
-  dotnav.on("click", function(e) {
+  dotnav.on("click", function() {
+    var size = $('#galleryOuter').width();
+    var slides = $('.backgd');
+    // change classes
     dotnav.removeClass("active");
     $(this).addClass("active");
-    // jump to slide
+    // switcher between the three dotnavs
+    if ($(this) == dotnav[0]) {
+      slides.css("transform", "translateX(0px)");
+    } else if ($(this) == dotnav[1]) {
+      slides.css("transform", "translateX(-" + size + "px)");
+    } else {
+      slides.css("transform", "translateX(-" + size*2 + "px)");
+    }
+
   });
 }());
 
