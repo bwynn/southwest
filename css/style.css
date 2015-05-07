@@ -9,6 +9,11 @@ ul {
   margin: 0;
 }
 
+body {
+  font-family: 'Cabin', sans-serif;
+  font-size: 22px;
+}
+
 figure {
   display: block;
 }
@@ -208,6 +213,46 @@ article {
 
 .dotna li.current a::after {
 	height: 100%;
+}
+
+/* ----------------- Gallery Content --------------- */
+
+#one h1 {
+  text-align: center;
+}
+
+#two h2,
+#two span,
+#three h2,
+#three span {
+  display: inline-block;
+  position: relative;
+}
+
+#two span,
+#three span {
+  font-family: 'Parisienne', cursive;
+}
+
+#two h2 {
+  left: 20%;
+}
+
+#two span {
+  left: 17%;
+}
+
+#three span,
+#three h2 {
+  top: 10%;
+}
+
+#three span {
+  left: 32%;
+}
+
+#three h2 {
+  left: 35%;
 }
 
 /* ================= Backgrounds =================== */
