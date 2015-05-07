@@ -14,6 +14,7 @@ var gallery = {
   next: function(){
     var size = $('#galleryOuter').width();
     var slides = $('.backgd');
+    var dotnav = $(".dotnavwrap a");
 
       // 3 slide gallery, basic logic determines slide positions
       // conditional statement determines current transform values applied to the
