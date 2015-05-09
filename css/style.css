@@ -5,7 +5,9 @@ body {
 
 body,
 figure,
-ul {
+ul,
+h2,
+p {
   margin: 0;
 }
 
@@ -54,10 +56,28 @@ article {
   width: 50%;
 }
 
+h2,
+p {
+  padding: 1em;
+}
+
+article p {
+  padding: 0 1em 1em 1em;
+}
+
+#bodywrap {
+  position: relative;
+  top: -50px;
+  z-index: 1;
+}
+
 /* ===================== Header Styles ========================== */
 header {
   height: 50px;
   background-color: #333;
+  opacity: .8;
+  position: relative;
+  z-index: 2;
 }
 
 a.gohome {
@@ -111,9 +131,10 @@ a.gohome {
   float: left;
 }
 
+/* =============== Gallery Paddle & Dotnav =============== */
 #galleryOuter > nav {
   position: absolute;
-  top: 10%;
+  top: -25%;
   display: block;
   max-width: 1440px;
   width: 100%;
@@ -193,6 +214,7 @@ a.gohome {
   top: -55px;
 }
 
+/* small viewport requires 25% width */
 .dotnavwrap {
   width: 10%;
   margin: 0 auto;
@@ -236,6 +258,7 @@ a.gohome {
 
 #one h1 {
   text-align: center;
+  margin-top: 2em;
 }
 
 #two h2,
@@ -246,13 +269,14 @@ a.gohome {
   position: relative;
 }
 
-#two span,
+/*#two span,
 #three span {
   font-family: 'Parisienne', cursive;
-}
+}*/
 
 #two h2 {
   left: 20%;
+  margin-top: 2em;
 }
 
 #two span {
@@ -406,11 +430,6 @@ only screen and (max-width: 768px) and (min-resolution: 2dppx) {
 
 #sedona .img {
   background-image: url("../img/hotwalk.jpg");
-}
-
-#sedona article {
-  padding: 2em;
-  min-height: 500px;
 }
 
 .gc {
