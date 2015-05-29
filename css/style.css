@@ -54,6 +54,7 @@ a:hover {
 article {
   box-sizing: border-box;
   width: 50%;
+  float: left;
 }
 
 h2,
@@ -64,12 +65,6 @@ p {
 article p {
   padding: 0 1em 1em 1em;
 }
-
-/*#bodywrap {
-  position: relative;
-  top: -50px;
-  z-index: 1;
-}*/
 
 /* ===================== Header Styles ========================== */
 header {
@@ -268,11 +263,6 @@ a.gohome {
   display: inline-block;
   position: relative;
 }
-
-/*#two span,
-#three span {
-  font-family: 'Parisienne', cursive;
-}*/
 
 #two h2 {
   left: 17%;
