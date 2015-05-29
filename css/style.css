@@ -424,12 +424,8 @@ only screen and (max-width: 768px) and (min-resolution: 2dppx) {
 }
 
 .sedona {
-  background-image: url("../img/sedonadiv.jpg");
+  background-image: url("../img/sedonadivider.svg");
   background-position: bottom;
-}
-
-#sedona .img {
-  background-image: url("../img/hotwalk.jpg");
 }
 
 .gc {
