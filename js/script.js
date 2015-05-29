@@ -15,17 +15,22 @@ var gallery = {
     var size = $('#galleryOuter').width();
     var slides = $('.backgd');
     var dotnav = $(".dotnavwrap a");
+    var one = $(".dotnavwrap a")[1];
+    var two = $(".dotnavwrap a")[2];
 
       // 3 slide gallery, basic logic determines slide positions
       // conditional statement determines current transform values applied to the
       // .backgd elements. Logical or condition determines between no style
       // value applied and style applied for boolean determinations
+      dotnav.removeClass("active");
       if (slides.css("transform") == "none" ||
           slides.css("transform") == "matrix(1, 0, 0, 1, 0, 0)") {
         slides.css("transform", "translateX(-" + size + "px)");
+        one.classList.add("active");
       } else {
         // translate to farthest slide
         slides.css("transform", "translateX(-" + size*2 + "px)");
+        two.classList.add("active");
       }
     },
   previous: function(){
@@ -33,14 +38,20 @@ var gallery = {
     // property of the translate style on the gallery figure elements
     var size = $('#galleryOuter').width();
     var slides = $('.backgd');
+    var dotnav = $(".dotnavwrap a");
+    var zero = $(".dotnavwrap a")[0];
+    var one = $(".dotnavwrap a")[1];
 
+    dotnav.removeClass("active");
     // a reverse of the 3 slide gallery conditional from above, except
     // no 'or' statement required, as style has already been applied
     // by the time a user arrives at the far slide
     if (slides.css("transform") == "matrix(1, 0, 0, 1, -" + size*2 + ", 0)") {
       slides.css("transform", "translateX(-" + size + "px)");
+      one.classList.add("active");
     } else {
       slides.css("transform", "translateX(0px)");
+      zero.classList.add("active");
     }
     // loop through dotnav anchor elements, remove active class from all elements and
     // then set index to the next
@@ -87,13 +98,15 @@ $(function(){
   dotnav.on("click", function() {
     var size = $('#galleryOuter').width();
     var slides = $('.backgd');
+    var zero = $(".dotnavwrap a")[0];
+    var one = $(".dotnavwrap a")[1];
     // change classes
     dotnav.removeClass("active");
     $(this).addClass("active");
     // switcher between the three dotnavs
-    if ($(this) == dotnav[0]) {
+    if ($(this) == $(".dotnavwrap a")[0]) {
       slides.css("transform", "translateX(0px)");
-    } else if ($(this) == dotnav[1]) {
+    } else if ($(this) == $(".dotnavwrap a")[1]) {
       slides.css("transform", "translateX(-" + size + "px)");
     } else {
       slides.css("transform", "translateX(-" + size*2 + "px)");
