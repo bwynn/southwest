@@ -65,11 +65,11 @@ article p {
   padding: 0 1em 1em 1em;
 }
 
-#bodywrap {
+/*#bodywrap {
   position: relative;
   top: -50px;
   z-index: 1;
-}
+}*/
 
 /* ===================== Header Styles ========================== */
 header {
@@ -134,7 +134,7 @@ a.gohome {
 /* =============== Gallery Paddle & Dotnav =============== */
 #galleryOuter > nav {
   position: absolute;
-  top: -25%;
+  top: 15%;
   display: block;
   max-width: 1440px;
   width: 100%;
@@ -276,7 +276,7 @@ a.gohome {
 
 #two h2 {
   left: 17%;
-  margin-top: 1.5em;
+  margin-top: 1em;
 }
 
 #two span {
