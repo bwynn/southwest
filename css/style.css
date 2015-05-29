@@ -275,8 +275,8 @@ a.gohome {
 }*/
 
 #two h2 {
-  left: 20%;
-  margin-top: 2em;
+  left: 17%;
+  margin-top: 1.5em;
 }
 
 #two span {
@@ -293,7 +293,7 @@ a.gohome {
 }
 
 #three h2 {
-  left: 35%;
+  left: 30%;
 }
 
 /* ================= Backgrounds =================== */
@@ -426,6 +426,7 @@ only screen and (min-width: 1025px) and (min-resolution: 2dppx) {
 
 .sedona {
   background-image: url("../img/sedonadivider.svg");
+  background-size: cover;
   background-position: bottom;
 }
 
