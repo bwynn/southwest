@@ -129,7 +129,7 @@ a.gohome {
 /* =============== Gallery Paddle & Dotnav =============== */
 #galleryOuter > nav {
   position: absolute;
-  top: 15%;
+  top: 13%;
   display: block;
   max-width: 1440px;
   width: 100%;
@@ -138,6 +138,10 @@ a.gohome {
 
 #galleryOuter > nav > ul {
   height: 100%;
+  display: none;
+  -webkit-transition: .3s ease-in;
+  -moz-transition: .3s ease-in;
+  transition: .3s ease-in;
 }
 
 #galleryOuter > nav > ul > li {

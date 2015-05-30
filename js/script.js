@@ -109,5 +109,13 @@ $(function(){
   });
 }());
 
-
 gallery.setWidth();
+
+var hero = $("section#hero");
+var paddles = $("#galleryOuter > nav > ul");
+hero.mouseenter(function() {
+  paddles.css("display", "block");
+});
+hero.mouseleave(function() {
+  paddles.css("display", "none");
+});
