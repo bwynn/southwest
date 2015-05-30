@@ -7,6 +7,8 @@ var gallery = {
     var imgSize = $("#galleryOuter > #galleryWrap > figure.backgd");  //document.querySelectorAll('#galleryOuter > #galleryWrap > figure.backgd');
     var size = $("#galleryOuter").width();  //document.getElementById('galleryOuter').offsetWidth;
 
+    // loop through the elements to assign a width value. jQuery could
+    // use the each method to perform the same behavior
     for (var i = 0; i < imgSize.length; i++) {
       $(imgSize[i]).css("width", size + "px");  // vanilla js //imgSize[i].style.width = '' + size + 'px';
     }
@@ -55,23 +57,6 @@ var gallery = {
     }
     // loop through dotnav anchor elements, remove active class from all elements and
     // then set index to the next
-  },
-  dotnav: function() {
-    var dotnav = $(".dotnavwrap a");
-    var size = $('#galleryOuter').width();
-    var slides = $('.backgd');
-    // switcher between the three dotnavs
-    switch (dotnav) {
-      case 0:
-      slides.css("transform", "translateX(0px)");
-      break;
-      case 1:
-      slides.css("transform", "translateX(-" + size + "px)");
-      break;
-      case 2:
-      slides.css("transform", "translateX(-" + size*2 + "px)");
-      break;
-    }
   }
 };
 
@@ -81,12 +66,16 @@ var triggers = function() {
   var rightPaddle = $('#right a');
 
   leftPaddle.on('click', function(e) {
+    // set the width of the gallery slide
     gallery.setWidth();
+    // advance to the previous slide
     gallery.previous();
   });
 
   rightPaddle.on('click', function(e) {
+    // set the width of the gallery slide
     gallery.setWidth();
+    // advance to the next slide
     gallery.next();
   });
 }();
@@ -100,13 +89,18 @@ $(function(){
     var slides = $('.backgd');
     var zero = $(".dotnavwrap a")[0];
     var one = $(".dotnavwrap a")[1];
+
     // change classes
+    // remove active from full list of dotnav elements
     dotnav.removeClass("active");
+    // add the class back onto the clicked dotnav element
     $(this).addClass("active");
     // switcher between the three dotnavs
-    if ($(this) == $(".dotnavwrap a")[0]) {
+    // conditional determines the class attribute for the first
+    // two dotnav elements
+    if (zero.getAttribute("class") == "active") {
       slides.css("transform", "translateX(0px)");
-    } else if ($(this) == $(".dotnavwrap a")[1]) {
+    } else if (one.getAttribute("class") == "active") {
       slides.css("transform", "translateX(-" + size + "px)");
     } else {
       slides.css("transform", "translateX(-" + size*2 + "px)");
