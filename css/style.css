@@ -28,7 +28,8 @@ figure {
   background-position: center top;
 }
 
-figure.img {
+figure.img,
+#hero {
   height: 600px;
 }
 
@@ -82,9 +83,6 @@ a.gohome {
 }
 
 /* ===================== Gallery styles ========================= */
-#hero {
-  height:600px;
-}
 #galleryOuter {
   width: 100%;
 }
@@ -215,7 +213,12 @@ a.gohome {
 
 /* small viewport requires 25% width */
 .dotnavwrap {
-  width: 10%;
+  width: 100%;
+}
+
+.dotnavwrap > ul {
+  width: 100px;
+  display: block;
   margin: 0 auto;
 }
 
@@ -288,6 +291,14 @@ a.gohome {
 
 #three h2 {
   left: 30%;
+}
+
+.article-divider {
+  min-height: 500px;
+}
+
+#gc-break h1 {
+  text-align: center;
 }
 
 /* ================= Backgrounds =================== */
@@ -430,4 +441,46 @@ only screen and (min-width: 1025px) and (min-resolution: 2dppx) {
 
 .gc {
   background-color: black;
+}
+
+/* ======== Hosted Video ========= */
+
+
+iframe {
+  position: relative;
+  top: 4em;
+  max-width: 100%;
+}
+
+@media only screen and (max-width: 1095px) {
+  article {
+    width: 100%;
+  }
+  article p {
+    padding-bottom: 2em;
+  }
+  iframe {
+    display: block;
+    margin: 0 auto;
+    top: 0;
+    margin-bottom: 2em;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  figure.img,
+  #hero {
+    height: 500px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  figure.img,
+  #hero {
+    height: 400px;
+  }
+
+  article {
+    width: 100%;
+  }
 }
