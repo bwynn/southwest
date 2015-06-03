@@ -71,7 +71,6 @@ article p {
 header {
   height: 50px;
   background-color: #333;
-  opacity: .8;
   position: relative;
   z-index: 2;
 }
@@ -80,6 +79,7 @@ a.gohome {
   display: inline-block;
   padding: 15px;
   font-size: .7em;
+  color: #F5D153;
 }
 
 /* ===================== Gallery styles ========================= */
@@ -428,6 +428,10 @@ only screen and (min-width: 1025px) and (min-resolution: 2dppx) {
   background-position: center;
 }
 
+.jtree h2 {
+  color: #D19043;
+}
+
 #jtree .img {
   background-image: url("../img/jtree.jpg");
 }
@@ -436,6 +440,10 @@ only screen and (min-width: 1025px) and (min-resolution: 2dppx) {
   background-image: url("../img/sedonadivider.svg");
   background-size: cover;
   background-position: bottom;
+}
+
+.sedona h2 {
+  color: #FFC3BB;
 }
 
 #sedona .img {
@@ -489,5 +497,8 @@ iframe {
 
   article {
     width: 100%;
+  }
+  iframe {
+    margin-bottom: 0;
   }
 }
