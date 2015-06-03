@@ -6,6 +6,7 @@ body {
 body,
 figure,
 ul,
+h1,
 h2,
 p {
   margin: 0;
@@ -58,6 +59,7 @@ article {
   float: left;
 }
 
+h1,
 h2,
 p {
   padding: 1em;
@@ -300,10 +302,6 @@ a.gohome {
   min-height: 500px;
 }
 
-#gc-break h1 {
-  text-align: center;
-}
-
 /* ================= Backgrounds =================== */
 
 @media
@@ -454,6 +452,97 @@ only screen and (min-width: 1025px) and (min-resolution: 2dppx) {
   background-color: black;
 }
 
+/* ================= GC Break Section ===================== */
+
+/* Set all the elements to relative to enable z-index and position
+changes */
+#gc-break h1,
+#gc-rift,
+#left-rift-wrap,
+#right-rift-wrap,
+#left-top,
+#left-2,
+#left-3,
+#left-4 {
+  position: relative;
+}
+
+/* Set inherit to height property */
+#left-rift-wrap,
+#right-rift-wrap {
+  height: inherit;
+}
+
+/* color selection for section border-tops */
+/*#left-top,
+#left-2,
+#left-3,
+#left-4 {
+  border-top: 2px solid black;
+}
+
+#gc-rift,
+#left-rift-wrap,
+#right-rift-wrap,
+#left-top,
+#left-2,
+#left-3,
+#left-4 {
+  width: 100%;
+}
+
+#gc-break {
+  overflow: hidden;
+}
+
+#gc-break h1 {
+  display: inline-block;
+  z-index: 10;
+  float: left;
+}
+
+#gc-rift,
+#left-rift-wrap,
+#right-rift-wrap,
+#left-top,
+#left-2,
+#left-3,
+#left-4 {
+  float: left;
+}
+
+#gc-rift {
+  height: 106px;
+  display: block;
+  z-index: 1;
+}
+
+#left-rift-wrap {
+  z-index: 2;
+}
+
+#right-rift-wrap {
+  z-index: 3;
+}
+
+#left-top {
+  height: 84px;
+  top: 20px;
+  z-index: 4;
+}
+
+#left-2 {
+  z-index: 5;
+}
+
+#left-3 {
+  z-index: 6;
+}
+
+#left-4 {
+  z-index: 7;
+}
+/*
 /* ======== Hosted Video ========= */
 
 
@@ -486,6 +575,10 @@ iframe {
 }
 
 @media only screen and (max-width: 768px) {
+  #galleryOuter > nav {
+    display: none;
+  }
+
   figure.img,
   #hero {
     height: 400px;
