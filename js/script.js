@@ -113,8 +113,14 @@ gallery.setWidth();
 
 var hero = $("section#hero");
 var paddles = $("#galleryOuter > nav > ul");
+var zero = $(".dotnavwrap a")[0];
+var two = $(".dotnavwrap a")[2];
+var left = $("#galleryOuter > nav > ul > li")[0];
+
 hero.mouseenter(function() {
-  paddles.css("display", "block")
+  // show paddles
+  paddles.css("display", "block");
+  // conditional to remove unavailable paddle;
 });
 hero.mouseleave(function() {
   paddles.css("display", "none");
