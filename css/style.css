@@ -474,7 +474,7 @@ changes */
 }
 
 /* color selection for section border-tops */
-/*#left-top,
+#left-top,
 #left-2,
 #left-3,
 #left-4 {
@@ -518,6 +518,7 @@ changes */
 }
 
 #left-rift-wrap {
+  top: -106px;
   z-index: 2;
 }
 
@@ -542,7 +543,7 @@ changes */
 #left-4 {
   z-index: 7;
 }
-/*
+
 /* ======== Hosted Video ========= */
 
 
@@ -571,6 +572,10 @@ iframe {
   figure.img,
   #hero {
     height: 500px;
+  }
+
+  #galleryOuter > nav {
+    top: 5%;
   }
 }
 

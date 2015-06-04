@@ -105,7 +105,9 @@ $(function(){
     } else {
       slides.css("transform", "translateX(-" + size*2 + "px)");
     }
-
+    // use the gallery.setWidth() method to re-establish window size if
+    // user has changed orientation or size of the viewport
+    gallery.setWidth();
   });
 }());
 
