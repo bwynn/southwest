@@ -86,13 +86,15 @@ $(function(){
   // changes classes when user interacts with the dotnav anchor tag
   dotnav.on("click", function() {
     var size = $('#galleryOuter').width();
-    var slides = $('.backgd');
+    var slides = $('figure.backgd');
     var zero = $(".dotnavwrap a")[0];
     var one = $(".dotnavwrap a")[1];
 
     // change classes
     // remove active from full list of dotnav elements
     dotnav.removeClass("active");
+    // get rid of jquery mobile's default invoked ui-link class
+    dotnav.removeClass("ui-link");
     // add the class back onto the clicked dotnav element
     $(this).addClass("active");
     // switcher between the three dotnavs
@@ -127,5 +129,26 @@ gallery.setWidth();
   });
   hero.mouseleave(function() {
     paddles.css("display", "none");
+  });
+})();
+
+// resize browser window in mobile devices to handle orientation changes
+window.addEventListener("orientationchange", function() {
+  gallery.setWidth();
+});
+
+// get rid of instantiated content from jquery mobile
+$(function(){
+  $("div.ui-loader").remove();
+});
+
+(function() {
+  var swipe = $("figure.backgd");
+  swipe.on("swiperight", function() {
+    gallery.previous();
+  });
+
+  swipe.on("swipeleft", function() {
+    gallery.next();
   });
 })();
