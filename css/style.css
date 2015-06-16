@@ -304,123 +304,6 @@ a.gohome {
   min-height: 500px;
 }
 
-/* ================= Backgrounds =================== */
-
-@media
-only screen and (max-width: 768px) and (-webkit-min-device-pixel-ratio: 2),
-only screen and (max-width: 768px) and (min--moz-device-pixel-ratio: 2),
-only screen and (max-width: 768px) and (min-device-pixel-ratio: 2)
-only screen and (max-width: 768px) and (min-resolution: 192dpi),
-only screen and (max-width: 768px) and (min-resolution: 2dppx) {
-  #galleryWrap > figure#one {
-    background-image: url('../img/gallery1_sm_2x.jpg');
-    background-position: center bottom;
-  }
-
-  #galleryWrap > figure#two {
-    background-image: url('../img/gallery2_sm_2x.jpg');
-    background-position: center bottom;
-  }
-
-  #galleryWrap > figure#three {
-    background-image: url('../img/gallery3_sm_2x.jpg');
-    background-position: right bottom;
-  }
-}
-
-@media
-only screen and (max-width: 768px) and (-webkit-min-device-pixel-ratio: 1),
-only screen and (max-width: 768px) and (min--moz-device-pixel-ratio: 1),
-only screen and (max-width: 768px) and (min-device-pixel-ratio: 1) {
-  #galleryWrap > figure#one {
-    background-image: url('../img/gallery1_sm.jpg');
-    background-position: center bottom;
-  }
-
-  #galleryWrap > figure#two {
-    background-image: url('../img/gallery2_sm.jpg');
-    background-position: center bottom;
-  }
-
-  #galleryWrap > figure#three {
-    background-image: url('../img/gallery3_sm.jpg');
-    background-position: right;
-  }
-}
-
-@media
-only screen and (min-width: 769px) and (-webkit-min-device-pixel-ratio: 2),
-only screen and (min-width: 769px) and (min--moz-device-pixel-ratio: 2),
-only screen and (min-width: 769px) and (min-device-pixel-ratio: 2),
-only screen and (min-width: 769px) and (min-resolution: 192dpi),
-only screen and (min-width: 769px) and (min-resolution: 2dppx) {
-  #galleryWrap > figure#one {
-    background-image: url('../img/gallery1_md_2x.jpg');
-  }
-
-  #galleryWrap > figure#two {
-    background-image: url('../img/gallery2_md_2x.jpg');
-  }
-
-  #galleryWrap > figure#three {
-    background-image: url('../img/gallery3_md_2x.jpg');
-  }
-}
-
-
-@media
-only screen and (min-width: 769px) and (-webkit-min-device-pixel-ratio: 1),
-only screen and (min-width: 769px) and (min--moz-device-pixel-ratio: 1),
-only screen and (min-width: 769px) and (min-device-pixel-ratio: 1) {
-  #galleryWrap > figure#one {
-    background-image: url('../img/gallery1_md.jpg');
-  }
-
-  #galleryWrap > figure#two {
-    background-image: url('../img/gallery2_md.jpg');
-  }
-
-  #galleryWrap > figure#three {
-    background-image: url('../img/gallery3_md.jpg');
-  }
-}
-
-@media
-only screen and (min-width: 1025px) and (-webkit-min-device-pixel-ratio: 1),
-only screen and (min-width: 1025px) and (min--moz-device-pixel-ratio: 1),
-only screen and (min-width: 1025px) and (min-device-pixel-ratio: 1) {
-  #galleryWrap > figure#one {
-    background-image: url('../img/gallery1_lg.jpg');
-  }
-
-  #galleryWrap > figure#two {
-    background-image: url('../img/gallery2_lg.jpg');
-  }
-
-  #galleryWrap > figure#three {
-    background-image: url('../img/gallery3_lg.jpg');
-  }
-}
-
-@media
-only screen and (min-width: 1025px) and (-webkit-min-device-pixel-ratio: 2),
-only screen and (min-width: 1025px) and (min--moz-device-pixel-ratio: 2),
-only screen and (min-width: 1025px) and (min-device-pixel-ratio: 2),
-only screen and (min-width: 1025px) and (min-resolution: 192dpi),
-only screen and (min-width: 1025px) and (min-resolution: 2dppx) {
-  #galleryWrap > figure#one {
-    background-image: url('../img/gallery1_lg_2x.jpg');
-  }
-
-  #galleryWrap > figure#two {
-    background-image: url('../img/gallery2_lg_2x.jpg');
-  }
-
-  #galleryWrap > figure#three {
-    background-image: url('../img/gallery3_lg_2x.jpg');
-  }
-}
-
 /* ---------- Section dividers -----------*/
 .jtree {
   background: url('../img/joshuatree.svg');
@@ -454,96 +337,6 @@ only screen and (min-width: 1025px) and (min-resolution: 2dppx) {
   background-color: black;
 }
 
-/* ================= GC Break Section ===================== */
-
-/* Set all the elements to relative to enable z-index and position
-changes */
-/*#gc-break h1,
-#gc-rift,
-#left-rift-wrap,
-#right-rift-wrap,
-#left-top,
-#left-2,
-#left-3,
-#left-4 {
-  position: relative;
-}
-
-#left-rift-wrap,
-#right-rift-wrap {
-  height: inherit;
-}
-
-#left-top,
-#left-2,
-#left-3,
-#left-4 {
-  border-top: 2px solid black;
-}
-
-#gc-rift,
-#left-rift-wrap,
-#right-rift-wrap,
-#left-top,
-#left-2,
-#left-3,
-#left-4 {
-  width: 100%;
-}
-
-#gc-break {
-  overflow: hidden;
-}
-
-#gc-break h1 {
-  display: inline-block;
-  z-index: 10;
-  float: left;
-}
-
-#gc-rift,
-#left-rift-wrap,
-#right-rift-wrap,
-#left-top,
-#left-2,
-#left-3,
-#left-4 {
-  float: left;
-}
-
-#gc-rift {
-  height: 106px;
-  display: block;
-  z-index: 1;
-}
-
-#left-rift-wrap {
-  top: -106px;
-  z-index: 2;
-}
-
-#right-rift-wrap {
-  z-index: 3;
-}
-
-#left-top {
-  height: 84px;
-  top: 20px;
-  z-index: 4;
-}
-
-#left-2 {
-  z-index: 5;
-}
-
-#left-3 {
-  z-index: 6;
-}
-
-#left-4 {
-  z-index: 7;
-}*/
-
 /* ======== Hosted Video ========= */
 
 
@@ -551,6 +344,196 @@ iframe {
   position: relative;
   top: 4em;
   max-width: 100%;
+}
+
+/* ================= Backgrounds =================== */
+
+@media
+only screen and (max-width: 768px) and (-webkit-min-device-pixel-ratio: 2),
+only screen and (max-width: 768px) and (min--moz-device-pixel-ratio: 2),
+only screen and (max-width: 768px) and (min-device-pixel-ratio: 2)
+only screen and (max-width: 768px) and (min-resolution: 192dpi),
+only screen and (max-width: 768px) and (min-resolution: 2dppx) {
+  #galleryWrap > figure#one {
+    background-image: url('../img/gallery1_sm_2x.jpg');
+    background-position: center bottom;
+  }
+
+  #galleryWrap > figure#two {
+    background-image: url('../img/gallery2_sm_2x.jpg');
+    background-position: center bottom;
+  }
+
+  #galleryWrap > figure#three {
+    background-image: url('../img/gallery3_sm_2x.jpg');
+    background-position: right bottom;
+  }
+
+  .img {
+    background-image: url("../img/grandcanyon_sm_2x.jpg");
+  }
+
+  #jtree .img {
+    background-image: url("../img/jtree_sm_2x.jpg");
+  }
+
+  #sedona .img {
+    background-image: url("../img/sedona_sm_2x.jpg");
+  }
+
+}
+
+@media
+only screen and (max-width: 768px) and (-webkit-min-device-pixel-ratio: 1),
+only screen and (max-width: 768px) and (min--moz-device-pixel-ratio: 1),
+only screen and (max-width: 768px) and (min-device-pixel-ratio: 1) {
+  #galleryWrap > figure#one {
+    background-image: url('../img/gallery1_sm.jpg');
+    background-position: center bottom;
+  }
+
+  #galleryWrap > figure#two {
+    background-image: url('../img/gallery2_sm.jpg');
+    background-position: center bottom;
+  }
+
+  #galleryWrap > figure#three {
+    background-image: url('../img/gallery3_sm.jpg');
+    background-position: right;
+  }
+
+  .img {
+    background-image: url("../img/grandcanyon_sm.jpg");
+  }
+
+  #jtree .img {
+    background-image: url("../img/jtree_sm.jpg");
+  }
+
+  #sedona .img {
+    background-image: url("../img/sedona_sm.jpg");
+  }
+}
+
+@media
+only screen and (min-width: 769px) and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min-width: 769px) and (min--moz-device-pixel-ratio: 2),
+only screen and (min-width: 769px) and (min-device-pixel-ratio: 2),
+only screen and (min-width: 769px) and (min-resolution: 192dpi),
+only screen and (min-width: 769px) and (min-resolution: 2dppx) {
+  #galleryWrap > figure#one {
+    background-image: url('../img/gallery1_md_2x.jpg');
+  }
+
+  #galleryWrap > figure#two {
+    background-image: url('../img/gallery2_md_2x.jpg');
+  }
+
+  #galleryWrap > figure#three {
+    background-image: url('../img/gallery3_md_2x.jpg');
+  }
+
+  .img {
+    background-image: url("../img/grandcanyon_md_2x.jpg");
+  }
+
+  #jtree .img {
+    background-image: url("../img/jtree_md_2x.jpg");
+  }
+
+  #sedona .img {
+    background-image: url("../img/sedona_md_2x.jpg");
+  }
+}
+
+
+@media
+only screen and (min-width: 769px) and (-webkit-min-device-pixel-ratio: 1),
+only screen and (min-width: 769px) and (min--moz-device-pixel-ratio: 1),
+only screen and (min-width: 769px) and (min-device-pixel-ratio: 1) {
+  #galleryWrap > figure#one {
+    background-image: url('../img/gallery1_md.jpg');
+  }
+
+  #galleryWrap > figure#two {
+    background-image: url('../img/gallery2_md.jpg');
+  }
+
+  #galleryWrap > figure#three {
+    background-image: url('../img/gallery3_md.jpg');
+  }
+
+  .img {
+    background-image: url("../img/grandcanyon_md.jpg");
+  }
+
+  #jtree .img {
+    background-image: url("../img/jtree_md.jpg");
+  }
+
+  #sedona .img {
+    background-image: url("../img/sedona_md.jpg");
+  }
+}
+
+@media
+only screen and (min-width: 1025px) and (-webkit-min-device-pixel-ratio: 1),
+only screen and (min-width: 1025px) and (min--moz-device-pixel-ratio: 1),
+only screen and (min-width: 1025px) and (min-device-pixel-ratio: 1) {
+  #galleryWrap > figure#one {
+    background-image: url('../img/gallery1_lg.jpg');
+  }
+
+  #galleryWrap > figure#two {
+    background-image: url('../img/gallery2_lg.jpg');
+  }
+
+  #galleryWrap > figure#three {
+    background-image: url('../img/gallery3_lg.jpg');
+  }
+
+  .img {
+    background-image: url("../img/grandcanyon_lg.jpg");
+  }
+
+  #jtree .img {
+    background-image: url("../img/jtree_lg.jpg");
+  }
+
+  #sedona .img {
+    background-image: url("../img/sedona_lg.jpg");
+  }
+}
+
+@media
+only screen and (min-width: 1025px) and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min-width: 1025px) and (min--moz-device-pixel-ratio: 2),
+only screen and (min-width: 1025px) and (min-device-pixel-ratio: 2),
+only screen and (min-width: 1025px) and (min-resolution: 192dpi),
+only screen and (min-width: 1025px) and (min-resolution: 2dppx) {
+  #galleryWrap > figure#one {
+    background-image: url('../img/gallery1_lg_2x.jpg');
+  }
+
+  #galleryWrap > figure#two {
+    background-image: url('../img/gallery2_lg_2x.jpg');
+  }
+
+  #galleryWrap > figure#three {
+    background-image: url('../img/gallery3_lg_2x.jpg');
+  }
+
+  .img {
+    background-image: url("../img/grandcanyon_lg_2x.jpg");
+  }
+
+  #jtree .img {
+    background-image: url("../img/jtree_lg_2x.jpg");
+  }
+
+  #sedona .img {
+    background-image: url("../img/sedona_lg_2x.jpg");
+  }
 }
 
 @media only screen and (max-width: 1095px) {
