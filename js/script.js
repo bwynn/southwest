@@ -115,24 +115,30 @@ $(function(){
 
 gallery.setWidth();
 
-(function() {
-  var hero = $("section#hero");
+var paddleDisplay = function() {
   var paddles = $("#galleryOuter > nav > ul");
-  var zero = $(".dotnavwrap a")[0];
-  var two = $(".dotnavwrap a")[2];
-  var left = $("#galleryOuter > nav > ul > li")[0];
+
+  // show paddles
+  if (paddles.css("display") == "none") {
+    paddles.fadeIn("slow");
+  }
+  else {
+    paddles.fadeTo("slow", 0);
+  }
+  // conditional to remove unavailable paddle;
+}
+
+
+$(document).ready(function() {
+  var hero = $("section#hero");
 
   hero.mouseenter(function() {
-    // show paddles
-    //paddles.css("display", "block");
-    paddles.show(300);
-    // conditional to remove unavailable paddle;
+    paddleDisplay();
   });
   hero.mouseleave(function() {
-    //paddles.css("display", "none");
-    paddles.hide(300);
+    paddleDisplay();
   });
-})();
+});
 
 // resize browser window in mobile devices to handle orientation changes
 window.addEventListener("orientationchange", function() {
