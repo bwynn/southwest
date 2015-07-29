@@ -153,9 +153,6 @@ a.gohome {
   position: relative;
   top: 200px;
   margin: 0;
-  -webkit-transition: .3s ease-in;
-  -moz-transition: .3s ease-in;
-  transition: .3s ease-in;
 }
 
 #galleryOuter > nav > ul > li > a {
@@ -163,9 +160,6 @@ a.gohome {
   height: inherit;
   background: #fafafa;
   opacity: .5;
-  -webkit-transition: .2s ease-in-out;
-  -moz-transition: .2s ease-in-out;
-  transition: .2s ease-in-out;
 }
 
 #galleryOuter > nav > ul > li > a:hover {
@@ -306,7 +300,6 @@ a.gohome {
 
 /* ---------- Section dividers -----------*/
 .jtree {
-  background: url('../img/joshuatree.svg');
   background-size: cover;
   background-position: center;
 }
@@ -320,7 +313,6 @@ a.gohome {
 }
 
 .sedona {
-  background-image: url("../img/sedonadivider.svg");
   background-size: cover;
   background-position: bottom;
 }
@@ -373,8 +365,16 @@ only screen and (max-width: 768px) and (min-resolution: 2dppx) {
     background-image: url("../img/grandcanyon_sm_2x.jpg");
   }
 
+  .jtree {
+    background-image: url('../img/joshuatree_sm_2x.png');
+  }
+
   #jtree .img {
     background-image: url("../img/jtree_sm_2x.jpg");
+  }
+
+  .sedona {
+    background-image: url('../img/sedonadiv_sm_2x.png');
   }
 
   #sedona .img {
@@ -406,8 +406,16 @@ only screen and (max-width: 768px) and (min-device-pixel-ratio: 1) {
     background-image: url("../img/grandcanyon_sm.jpg");
   }
 
+  .jtree {
+    background-image: url('../img/joshuatree_sm.png');
+  }
+
   #jtree .img {
     background-image: url("../img/jtree_sm.jpg");
+  }
+
+  .sedona {
+    background-image: url('../img/sedonadiv_sm.png');
   }
 
   #sedona .img {
@@ -437,8 +445,16 @@ only screen and (min-width: 769px) and (min-resolution: 2dppx) {
     background-image: url("../img/grandcanyon_md_2x.jpg");
   }
 
+  .jtree {
+    background-image: url('../img/joshuatree_md_2x.png');
+  }
+
   #jtree .img {
     background-image: url("../img/jtree_md_2x.jpg");
+  }
+
+  .sedona {
+    background-image: url('../img/sedonadiv_md_2x.png');
   }
 
   #sedona .img {
@@ -467,8 +483,16 @@ only screen and (min-width: 769px) and (min-device-pixel-ratio: 1) {
     background-image: url("../img/grandcanyon_md.jpg");
   }
 
+  .jtree {
+    background-image: url('../img/joshuatree_md.png');
+  }
+
   #jtree .img {
     background-image: url("../img/jtree_md.jpg");
+  }
+
+  .sedona {
+    background-image: url('../img/sedonadiv_md.png');
   }
 
   #sedona .img {
@@ -496,8 +520,16 @@ only screen and (min-width: 1025px) and (min-device-pixel-ratio: 1) {
     background-image: url("../img/grandcanyon_lg.jpg");
   }
 
+  .jtree {
+    background-image: url('../img/joshuatree_lg.png');
+  }
+
   #jtree .img {
     background-image: url("../img/jtree_lg.jpg");
+  }
+
+  .sedona {
+    background-image: url('../img/sedonadiv_lg.png');
   }
 
   #sedona .img {
@@ -527,8 +559,16 @@ only screen and (min-width: 1025px) and (min-resolution: 2dppx) {
     background-image: url("../img/grandcanyon_lg_2x.jpg");
   }
 
+  .jtree {
+    background-image: url('../img/joshuatree_lg_2x.png');
+  }
+
   #jtree .img {
     background-image: url("../img/jtree_lg_2x.jpg");
+  }
+
+  .sedona {
+    background-image: url('../img/sedonadiv_lg_2x.png');
   }
 
   #sedona .img {

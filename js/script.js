@@ -124,11 +124,13 @@ gallery.setWidth();
 
   hero.mouseenter(function() {
     // show paddles
-    paddles.css("display", "block");
+    //paddles.css("display", "block");
+    paddles.show(300);
     // conditional to remove unavailable paddle;
   });
   hero.mouseleave(function() {
-    paddles.css("display", "none");
+    //paddles.css("display", "none");
+    paddles.hide(300);
   });
 })();
 
