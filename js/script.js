@@ -115,30 +115,30 @@ $(function(){
 
 gallery.setWidth();
 
-var paddleDisplay = function() {
-  var paddles = $("#galleryOuter > nav > ul");
-
-  // show paddles
-  if (paddles.css("display") == "none") {
-    paddles.fadeIn("slow");
-  }
-  else {
-    paddles.fadeTo("slow", 0);
-  }
-  // conditional to remove unavailable paddle;
-}
-
-
 $(document).ready(function() {
+  var paddleDisplay = function() {
+    var paddles = $("#galleryOuter > nav > ul");
+
+    // show paddles
+    if (paddles.css("display") == "none") {
+      paddles.css("opacity", 1).fadeIn(400);
+    }
+    else {
+      paddles.fadeTo(300, 0).hide(300);
+    }
+    // conditional to remove unavailable paddle;
+  }
+
   var hero = $("section#hero");
 
-  hero.mouseenter(function() {
-    paddleDisplay();
-  });
-  hero.mouseleave(function() {
-    paddleDisplay();
-  });
+    hero.on("mouseenter", function() {
+      paddleDisplay();
+    });
+    hero.on("mouseleave", function() {
+      paddleDisplay();
+    });
 });
+
 
 // resize browser window in mobile devices to handle orientation changes
 window.addEventListener("orientationchange", function() {

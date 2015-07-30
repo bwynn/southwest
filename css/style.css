@@ -56,8 +56,9 @@ a:hover {
 
 article {
   box-sizing: border-box;
-  width: 50%;
+  width: 46%;
   float: left;
+  padding: .5em;
 }
 
 h1,
@@ -313,6 +314,7 @@ a.gohome {
 }
 
 .sedona {
+  width: 100%;
   background-size: cover;
   background-position: bottom;
 }
@@ -331,11 +333,16 @@ a.gohome {
 
 /* ======== Hosted Video ========= */
 
+#movieWrap {
+  float: right;
+}
+
 
 iframe {
   position: relative;
   top: 4em;
   max-width: 100%;
+  margin-right: 1.5em;
 }
 
 /* ================= Backgrounds =================== */
@@ -575,19 +582,18 @@ only screen and (min-width: 1025px) and (min-resolution: 2dppx) {
     background-image: url("../img/sedona_lg_2x.jpg");
   }
 }
-
-@media only screen and (max-width: 1095px) {
-  article {
+@media only screen and (max-width: 1100px) {
+  .article-divider > article {
     width: 100%;
   }
-  article p {
-    padding-bottom: 2em;
-  }
-  iframe {
+  #movieWrap {
+    float: none;
     display: block;
-    margin: 0 auto;
+  }
+  #movieWrap iframe {
     top: 0;
-    margin-bottom: 2em;
+    display: block;
+    margin: 0 auto 1em;
   }
 }
 
@@ -619,7 +625,10 @@ only screen and (min-width: 1025px) and (min-resolution: 2dppx) {
   article {
     width: 100%;
   }
-  iframe {
+}
+
+@media only screen and (max-width: 500px) {
+  #movieWrap iframe {
     margin-bottom: 0;
   }
 }
