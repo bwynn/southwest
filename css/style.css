@@ -631,4 +631,11 @@ only screen and (min-width: 1025px) and (min-resolution: 2dppx) {
   #movieWrap iframe {
     margin-bottom: 0;
   }
+  .article-divider > article > h2 {
+    padding-left: .7em;
+  }
+
+  .article-divider p {
+    font-size: .8em;
+  }
 }
