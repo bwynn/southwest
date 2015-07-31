@@ -603,7 +603,7 @@ only screen and (min-width: 1025px) and (min-resolution: 2dppx) {
     height: 500px;
   }
 
-  #galleryOuter > nav {
+  #galleryOuter > nav > ul > li {
     top: 150px;
   }
 }

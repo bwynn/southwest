@@ -156,6 +156,12 @@
     });
   };
 
+  var resizeEvent = function() {
+    $(window).resize(function() {
+      gallery.setWidth();
+    })
+  }
+
 
   var init = function() {
     // initialize paddle nav event
@@ -170,11 +176,15 @@
     // initialize touch swipe event
     touchSwipeEvent();
 
+    // resize event
+    resizeEvent();
+
     // initialize orientation change event
-    changeOrientationEvent();
+    //changeOrientationEvent();
 
     // establish window width for gallery nav
     gallery.setWidth();
+
   };
 
   return init();
