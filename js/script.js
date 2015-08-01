@@ -61,6 +61,29 @@
     }
   };
 
+  var setSlide = function() {
+    var size = $('#galleryOuter').width();
+    var slides = $('figure.backgd');
+    var zero = $(".dotnavwrap a")[0];
+    var one = $(".dotnavwrap a")[1];
+    var two = $(".dotnavwrap a")[2];
+    // switcher between the three dotnavs
+    // conditional determines the class attribute for the first
+    // two dotnav elements
+    if (zero.getAttribute("class") == "active") {
+      slides.css("transform", "translateX(0px)");
+    }
+    else if (one.getAttribute("class") == "active") {
+      slides.css("transform", "translateX(-" + size + "px)");
+    }
+    else if (two.getAttribute("class") == "active" ) {
+      slides.css("transform", "translateX(-" + size*2 + "px)");
+    }
+    else {
+      return slides.css("transform", "translateX(0px)");
+    }
+  };
+
   // self-invoked function returns access to the event handlers when the page loads
   var paddleNavEvent = function() {
     var leftPaddle = $('#left a');
@@ -86,11 +109,6 @@
 
     // changes classes when user interacts with the dotnav anchor tag
     dotnav.on("click", function() {
-      var size = $('#galleryOuter').width();
-      var slides = $('figure.backgd');
-      var zero = $(".dotnavwrap a")[0];
-      var one = $(".dotnavwrap a")[1];
-
       // change classes
       // remove active from full list of dotnav elements
       dotnav.removeClass("active");
@@ -98,16 +116,8 @@
       dotnav.removeClass("ui-link");
       // add the class back onto the clicked dotnav element
       $(this).addClass("active");
-      // switcher between the three dotnavs
-      // conditional determines the class attribute for the first
-      // two dotnav elements
-      if (zero.getAttribute("class") == "active") {
-        slides.css("transform", "translateX(0px)");
-      } else if (one.getAttribute("class") == "active") {
-        slides.css("transform", "translateX(-" + size + "px)");
-      } else {
-        slides.css("transform", "translateX(-" + size*2 + "px)");
-      }
+      // invoke setSlide function
+      setSlide();
       // use the gallery.setWidth() method to re-establish window size if
       // user has changed orientation or size of the viewport
       gallery.setWidth();
@@ -126,7 +136,7 @@
         paddles.fadeTo(300, 0).hide(300);
       }
       // conditional to remove unavailable paddle;
-    }
+    };
 
     var hero = $("section#hero");
 
@@ -149,18 +159,14 @@
     });
   };
 
-  var changeOrientationEvent = function() {
-    // resize browser window in mobile devices to handle orientation changes
-    window.addEventListener("orientationchange", function() {
-      gallery.setWidth();
-    });
-  };
-
   var resizeEvent = function() {
     $(window).resize(function() {
+      var slides = $('figure.backgd');
+
       gallery.setWidth();
-    })
-  }
+      slides.css("transform", "translateX(0px)");
+    });
+  };
 
 
   var init = function() {
@@ -178,9 +184,6 @@
 
     // resize event
     resizeEvent();
-
-    // initialize orientation change event
-    //changeOrientationEvent();
 
     // establish window width for gallery nav
     gallery.setWidth();
