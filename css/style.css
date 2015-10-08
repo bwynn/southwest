@@ -16,6 +16,8 @@ body {
   font-family: 'Cabin', sans-serif;
   font-size: 22px;
   max-width: 1440px;
+  margin: 0 auto;
+  background-color: #111;
 }
 
 figure {
@@ -315,6 +317,11 @@ div#galleryOuter:hover nav.hover-navs {
   min-height: 500px;
 }
 
+.article-divider,
+section#gc-break {
+  background-color: #fafafa;
+}
+
 /* ---------- Section dividers -----------*/
 .jtree {
   background-size: cover;
@@ -359,6 +366,11 @@ iframe {
   top: 4em;
   max-width: 100%;
   margin-right: 1.5em;
+}
+
+/* ================= jQuery UI Hack ================= */
+div.ui-loader {
+  display: none;
 }
 
 /* ================= Backgrounds =================== */

@@ -79,16 +79,19 @@
   };*/
   // ------------------------- END DOM METHODS ------------------------- */
 
-  var setSlide = function() {
-    var size = $('#galleryOuter').width();
-    var slides = $('figure.backgd');
-    //var zero = $(".dotnavwrap a")[0];
-    //var one = $(".dotnavwrap a")[1];
-    //var two = $(".dotnavwrap a")[2];
-    var navItem = $(".dotnavwrap a");
+  var setSlide = function( slides, navItem ) {
+    var size = $('#galleryOuter').width(),
+        zero = $(".dotnavwrap a")[0],
+        one = $(".dotnavwrap a")[1],
+        two = $(".dotnavwrap a")[2];
 
     // run a for loop through each indexed item. declare using each method
     // to determine slide index. translateX(-" + ( slide[i] * 2 ) + 'px'
+    /*for (var i = 0; i < navItem.length; i++) {
+      if ( navItem[i].getAttribute("class") === "active") {
+        return slides.css("transform", "translateX(-" + size[i]*2 + ")")
+      }
+    }*/
 
     // switcher between the three dotnavs
     // conditional determines the class attribute for the first
@@ -132,6 +135,8 @@
 
     // changes classes when user interacts with the dotnav anchor tag
     dotnav.on("click", function() {
+      var slides = $('figure.backgd'),
+          navItem = $(".dotnavwrap a");
       // change classes
       // remove active from full list of dotnav elements
       dotnav.removeClass("active");
@@ -140,7 +145,7 @@
       // add the class back onto the clicked dotnav element
       $(this).addClass("active");
       // invoke setSlide function
-      setSlide();
+      setSlide( slides, navItem );
       // use the gallery.setWidth() method to re-establish window size if
       // user has changed orientation or size of the viewport
       gallery.setWidth();
