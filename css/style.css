@@ -105,10 +105,11 @@ a.gohome {
   overflow: hidden;
   max-width: 1440px;
   margin: 0 auto;
+  position: relative;
 }
 
 #galleryWrap {
-  width: 3840px;
+  width: 10000px;
 }
 
 #left {
