@@ -61,12 +61,35 @@
     }
   };
 
+  // -------------------------- DOM METHODS ---------------------------- */
+  /*var paddleDisplay = function() {
+    var paddles = $("#galleryOuter > nav > ul");
+
+    // show paddles
+    if (paddles.css("display") === "none") {
+      paddles.css("opacity", 1).fadeIn(400);
+    }
+    else if (paddles.css("display") === "block") {
+      paddles.fadeTo(300, 0).hide(300);
+    }
+    else {
+      console.log("something went wrong with the paddle display dom method");
+    }
+    // conditional to remove unavailable paddle;
+  };*/
+  // ------------------------- END DOM METHODS ------------------------- */
+
   var setSlide = function() {
     var size = $('#galleryOuter').width();
     var slides = $('figure.backgd');
-    var zero = $(".dotnavwrap a")[0];
-    var one = $(".dotnavwrap a")[1];
-    var two = $(".dotnavwrap a")[2];
+    //var zero = $(".dotnavwrap a")[0];
+    //var one = $(".dotnavwrap a")[1];
+    //var two = $(".dotnavwrap a")[2];
+    var navItem = $(".dotnavwrap a");
+
+    // run a for loop through each indexed item. declare using each method
+    // to determine slide index. translateX(-" + ( slide[i] * 2 ) + 'px'
+
     // switcher between the three dotnavs
     // conditional determines the class attribute for the first
     // two dotnav elements
@@ -124,20 +147,7 @@
     });
   };
 
-  var paddleDisplayEvent = function() {
-    var paddleDisplay = function() {
-      var paddles = $("#galleryOuter > nav > ul");
-
-      // show paddles
-      if (paddles.css("display") == "none") {
-        paddles.css("opacity", 1).fadeIn(400);
-      }
-      else {
-        paddles.fadeTo(300, 0).hide(300);
-      }
-      // conditional to remove unavailable paddle;
-    };
-
+  /*var paddleDisplayEvent = function() {
     var hero = $("section#hero");
 
       hero.on("mouseenter", function() {
@@ -146,7 +156,7 @@
       hero.on("mouseleave", function() {
         paddleDisplay();
       });
-  };
+  };*/
 
   var touchSwipeEvent = function() {
     var swipe = $("figure.backgd");
@@ -177,7 +187,7 @@
     dotNavEvent();
 
     // initialize paddle display event
-    paddleDisplayEvent();
+    //paddleDisplayEvent();
 
     // initialize touch swipe event
     touchSwipeEvent();

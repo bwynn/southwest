@@ -143,9 +143,24 @@ a.gohome {
   /*height: 70%;*/
 }
 
-#galleryOuter > nav > ul {
-  /*height: 100%;*/
-  display: none;
+div#galleryOuter nav.hover-navs {
+  opacity: 0;
+}
+
+div#galleryOuter:hover nav.hover-navs {
+  animation: navs .3s;
+  animation-timing-function: ease-in;
+  animation-direction: forwards;
+  opacity: .8;
+}
+
+@keyframes navs {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: .8;
+  }
 }
 
 #galleryOuter > nav > ul > li {
@@ -161,6 +176,7 @@ a.gohome {
   height: inherit;
   background: #fafafa;
   opacity: .5;
+  transition: .3s background ease-out;
 }
 
 #galleryOuter > nav > ul > li > a:hover {
